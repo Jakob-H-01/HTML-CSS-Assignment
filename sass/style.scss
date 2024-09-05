@@ -1,0 +1,260 @@
+$color-primary: #6366F1;
+$color-white: #fff;
+$color-black: #131022;
+$color-grey-dark: #33354D;
+$color-grey-medium: #585C7B;
+$color-grey-light: #9397AD;
+$font-size-large: 1.8rem;
+$font-size-medium: 1.6rem;
+$font-size-small: 1.4rem;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+header, section, footer {
+  padding-inline: 1.2rem;
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.1rem;
+
+  a {
+    text-decoration: none;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.71rem;
+    font-weight: 800;
+    font-size: 2.08rem;
+    line-height: 3.33rem;
+    color: $color-black;
+    
+    &-img {
+      width: 4.7rem;
+      height: 4.4rem;
+    }
+  }
+
+  &__menu {
+    display: none;
+
+    &-item {
+      list-style: none;
+  
+      a {
+        color: $color-grey-dark;
+        font-size: $font-size-medium;
+        line-height: 160%;
+      }
+    }
+  }
+  
+  &__container {
+    display: flex;
+    align-items: center;
+    
+    &--1 {
+      gap: 4.8rem; 
+    }
+    
+    &--2 {
+      gap: 2.4rem;
+    }
+
+    &--inner {
+      gap: 1.186rem;
+    }
+  }
+
+  &__paragraph {
+    color: $color-black;
+    font-size: $font-size-medium;
+    font-weight: 600;
+    line-height: 160%;
+    display: none;
+  }
+
+  &__checkbox {
+    width: 4.6rem;
+    height: 2.4rem;
+    background: $color-grey-light;
+    appearance: none;
+    border-radius: 4.6rem;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &::before {
+      content: "";
+      width: 2.4rem;
+      height: 2.4rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: $color-white;
+      border-radius: 50%;
+      transform: scale(0.75);
+      transition: 0.5s;
+    }
+  }
+}
+
+.section-hero {
+  background: radial-gradient(170deg, rgba(100, 103, 242, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%);
+  height: 85.3vh;
+  margin-top: 2.6rem;
+  padding-bottom: 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__link-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    &-icon {
+      height: 3.3rem;
+    }
+  }
+
+  &__button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.239rem;
+
+    &-button {
+      width: 2rem;
+    }
+  }
+
+  &__image-container {
+    display: none;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+  &--mobile-menu {
+    width: 3.1rem;
+    height: 3.6rem;
+  }
+
+  &--download {
+    background-color: $color-black;
+    padding: 1rem;
+    border-radius: 0.8rem;
+  }
+
+  &--discover-more {
+    background-color: $color-white;
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 50%;
+  }
+}
+
+.btn-primary {
+  background-color: $color-primary;
+  color: $color-white;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  &--small {
+    border-radius: 0.4rem;
+    padding: 0.9rem 2rem;
+    font-size: $font-size-small;
+    // font-weight: 600;
+    line-height: 1.8rem;
+    display: none;
+  }
+
+  &--medium {
+    border-radius: 0.6rem;
+    padding: 1.1rem 2.8rem;
+    font-size: $font-size-small;
+    // font-weight: 600;
+    line-height: 2.24rem;
+  }
+
+  &--large {
+    border-radius: 0 0.8rem 0.8rem 0;
+    padding: 1.3rem 3.2rem;
+    font-size: $font-size-medium;
+    // font-weight: 600;
+    line-height: 2.56rem;
+  }
+}
+
+.paragraph {
+  color: $color-grey-medium;
+  font-weight: 400;
+
+  &--big {
+    font-size: $font-size-large;
+    line-height: 2.88rem;
+  }
+
+  &--medium {
+    font-size: $font-size-medium;
+    line-height: 2.56rem;
+  }
+
+  &--small {
+    font-size: $font-size-small;
+    line-height: 2.24rem;
+  }
+}
+
+h1, h2, h3, h4 {
+  color: $color-black;
+  font-weight: 800;
+}
+
+h1 {
+  font-size: 3.41rem;
+  line-height: 4.44rem;
+}
+
+h2 {
+  font-size: 2.79rem;
+  line-height: 3.62rem;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 2.8rem;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2.08rem;
+}
