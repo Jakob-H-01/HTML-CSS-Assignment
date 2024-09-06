@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 html {
@@ -26,10 +27,7 @@ header, section, footer {
   align-items: center;
   padding-top: 1.1rem;
 }
-.header a {
-  text-decoration: none;
-}
-.header__logo {
+.header .logo {
   display: flex;
   align-items: center;
   gap: 0.71rem;
@@ -37,43 +35,135 @@ header, section, footer {
   font-size: 2.08rem;
   line-height: 3.33rem;
   color: #131022;
+  text-decoration: none;
 }
-.header__logo-img {
-  width: 4.7rem;
-  height: 4.4rem;
+.header .nav-container {
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
 }
-.header__menu {
+.header .nav-container .nav-links {
   display: none;
 }
-.header__menu-item {
+.header .nav-container .nav-links-link {
   list-style: none;
 }
-.header__menu-item a {
+.header .nav-container .nav-links-link a {
   color: #33354D;
   font-size: 1.6rem;
   line-height: 160%;
+  text-decoration: none;
 }
-.header__container {
+.header .button-container {
   display: flex;
   align-items: center;
-}
-.header__container--1 {
-  gap: 4.8rem;
-}
-.header__container--2 {
   gap: 2.4rem;
 }
-.header__container--inner {
+.header .button-container .inner-container {
+  display: flex;
+  align-items: center;
   gap: 1.186rem;
 }
-.header__paragraph {
-  color: #131022;
-  font-size: 1.6rem;
-  font-weight: 600;
-  line-height: 160%;
+
+.section-hero {
+  background: radial-gradient(circle at center 100%, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%);
+  height: 85.3vh;
+  margin-top: 2.6rem;
+  padding-bottom: 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.section-hero .link-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.section-hero .link-container .icon-appstore {
+  height: 3.4rem;
+  width: 12.5rem;
+}
+.section-hero .link-container .icon-googleplay {
+  height: 3.3rem;
+  width: 14rem;
+}
+.section-hero .button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.239rem;
+}
+.section-hero .button-container .icon {
+  width: 2rem;
+  height: 2rem;
+}
+.section-hero .image-container {
   display: none;
 }
-.header__checkbox {
+
+.section-features {
+  margin-top: 3.69rem;
+  padding-bottom: 4.42rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-features .logos {
+  display: none;
+}
+.section-features .phone {
+  display: none;
+}
+.section-features .features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.24rem;
+}
+.section-features .features-lead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2.369rem;
+}
+.section-features .features-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.24rem;
+}
+.section-features .features-items-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.24rem;
+}
+.section-features .features-items-item {
+  display: flex;
+  gap: 2.4rem;
+  align-items: flex-start;
+}
+.section-features .features-items-item:first-child {
+  align-self: stretch;
+}
+.section-features .features-items-item img {
+  background: #F3F6FF;
+  padding: 1.6rem;
+  border-radius: 0.8rem;
+}
+.section-features .features-items-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.16rem;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+}
+.btn--toggle {
   width: 4.6rem;
   height: 2.4rem;
   background: #9397AD;
@@ -86,7 +176,7 @@ header, section, footer {
   cursor: pointer;
   transition: 0.5s;
 }
-.header__checkbox::before {
+.btn--toggle::before {
   content: "";
   width: 2.4rem;
   height: 2.4rem;
@@ -98,45 +188,9 @@ header, section, footer {
   transform: scale(0.75);
   transition: 0.5s;
 }
-
-.section-hero {
-  background: radial-gradient(170deg, rgba(100, 103, 242, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%);
-  height: 85.3vh;
-  margin-top: 2.6rem;
-  padding-bottom: 3rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.section-hero__link-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
-}
-.section-hero__link-container-icon {
-  height: 3.3rem;
-}
-.section-hero__button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2.239rem;
-}
-.section-hero__button-container-button {
-  width: 2rem;
-}
-.section-hero__image-container {
-  display: none;
-}
-
-.btn {
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
-}
 .btn--mobile-menu {
-  width: 3.1rem;
+  background-color: transparent;
+  width: 3rem;
   height: 3.6rem;
 }
 .btn--download {
@@ -146,32 +200,36 @@ header, section, footer {
 }
 .btn--discover-more {
   background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 4.4rem;
   height: 4.4rem;
   border-radius: 50%;
+  box-shadow: 0 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0 2px 6.4px -1px rgba(19, 16, 34, 0.03);
 }
-
-.btn-primary {
+.btn--primary {
   background-color: #6366F1;
   color: #fff;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.8rem;
 }
-.btn-primary--small {
+.btn--primary--small {
   border-radius: 0.4rem;
   padding: 0.9rem 2rem;
   font-size: 1.4rem;
   line-height: 1.8rem;
   display: none;
 }
-.btn-primary--medium {
+.btn--primary--medium {
   border-radius: 0.6rem;
   padding: 1.1rem 2.8rem;
   font-size: 1.4rem;
   line-height: 2.24rem;
 }
-.btn-primary--large {
+.btn--primary--large {
   border-radius: 0 0.8rem 0.8rem 0;
   padding: 1.3rem 3.2rem;
   font-size: 1.6rem;
@@ -181,18 +239,24 @@ header, section, footer {
 .paragraph {
   color: #585C7B;
   font-weight: 400;
+  line-height: 160%;
 }
-.paragraph--big {
+.paragraph--header {
+  color: #131022;
+  font-weight: 600;
+  display: none;
+}
+.paragraph--large {
   font-size: 1.8rem;
-  line-height: 2.88rem;
 }
 .paragraph--medium {
   font-size: 1.6rem;
-  line-height: 2.56rem;
 }
 .paragraph--small {
   font-size: 1.4rem;
-  line-height: 2.24rem;
+}
+.paragraph--light-grey {
+  color: #9397AD;
 }
 
 h1, h2, h3, h4 {
@@ -219,4 +283,9 @@ h4 {
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 2.08rem;
+}
+
+h6 {
+  font-size: 2rem;
+  line-height: 2.8rem;
 }/*# sourceMappingURL=style.css.map */
