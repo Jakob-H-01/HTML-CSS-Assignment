@@ -1,3 +1,82 @@
+:root {
+  --color-primary: #6366F1;
+  --color-white: #fff;
+  --color-background: #fff;
+  --color-gray-900: #0B0F19;
+  --color-gray-800: #33354D;
+  --color-gray-700: #565973;
+  --color-gray-600: #9397AD;
+  --color-gray-500: #B4B7C9;
+  --color-gray-400: #D4D7E5;
+  --color-gray-300: #E2E5F1;
+  --color-gray-200: #EFF2FC;
+  --color-gray-100: #F3F6FF;
+}
+
+.dark-mode .wrapper {
+  background-color: var(--color-gray-900);
+}
+.dark-mode .header {
+  background-color: #1B1F29;
+}
+.dark-mode .header .logo {
+  color: var(--color-white);
+}
+.dark-mode .header .nav-container .nav-links-link a {
+  color: rgba(255, 255, 255, 0.85);
+}
+.dark-mode .section-features .features-items-item img {
+  background: rgba(99, 102, 241, 0.08);
+}
+.dark-mode .section-instructions {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+.dark-mode .section-faq .faq-container .faq .questions li .question {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+.dark-mode .section-faq .faq-container .faq .questions li .active {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+.dark-mode .section-faq .form-container {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+.dark-mode .section-faq .form-container .form .container input {
+  background-color: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+.dark-mode .section-faq .form-container .form .container input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+.dark-mode .section-faq .form-container .form .container input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+.dark-mode .btn--download {
+  background-color: var(--color-gray-100);
+}
+.dark-mode .btn--discover-more {
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0;
+}
+.dark-mode .btn--faq {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.dark-mode .btn--primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6 {
+  color: var(--color-white);
+}
+.dark-mode .paragraph {
+  color: rgba(255, 255, 255, 0.7);
+}
+.dark-mode .paragraph--header {
+  color: var(--color-gray-700);
+}
+.dark-mode .paragraph--light-grey {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -19,14 +98,14 @@ header, section, footer {
 
 .wrapper {
   margin: 0 auto;
-  background-color: #fff;
+  background-color: var(--color-background);
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 1.1rem;
+  padding-block: 1.1rem;
 }
 .header .logo {
   display: flex;
@@ -35,7 +114,7 @@ header, section, footer {
   font-weight: 800;
   font-size: 2.08rem;
   line-height: 3.33rem;
-  color: #131022;
+  color: var(--color-gray-900);
   text-decoration: none;
 }
 .header .nav-container {
@@ -50,7 +129,7 @@ header, section, footer {
   list-style: none;
 }
 .header .nav-container .nav-links-link a {
-  color: #33354D;
+  color: var(--color-gray-800);
   font-size: 1.6rem;
   line-height: 160%;
   text-decoration: none;
@@ -68,9 +147,8 @@ header, section, footer {
 
 .section-hero {
   background: radial-gradient(circle at center 100%, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%);
-  height: 85.3vh;
-  margin-top: 2.6rem;
-  padding-bottom: 3rem;
+  height: 87.7vh;
+  padding-block: 2.5rem 3rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -94,10 +172,6 @@ header, section, footer {
   justify-content: center;
   align-items: center;
   gap: 2.239rem;
-}
-.section-hero .button-container .icon {
-  width: 2rem;
-  height: 2rem;
 }
 .section-hero .image-container {
   display: none;
@@ -150,7 +224,7 @@ header, section, footer {
   align-self: stretch;
 }
 .section-features .features-items-item img {
-  background: #F3F6FF;
+  background: var(--color-gray-100);
   padding: 1.6rem;
   border-radius: 0.8rem;
 }
@@ -161,7 +235,7 @@ header, section, footer {
 }
 
 .section-instructions {
-  background-color: #F3F6FF;
+  background-color: var(--color-gray-100);
   padding-top: 6.39rem;
   padding-bottom: 5.64rem;
   display: flex;
@@ -214,7 +288,7 @@ header, section, footer {
   border-radius: 0 0 0.8rem 0.8rem;
 }
 .section-faq .faq-container .faq .questions li .question {
-  border: 1px solid #E2E5F1;
+  border: 1px solid var(--color-gray-300);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -222,11 +296,11 @@ header, section, footer {
   padding: 1.6rem 2.4rem;
 }
 .section-faq .faq-container .faq .questions li .active {
-  border-inline: 1px solid #E2E5F1;
+  border-inline: 1px solid var(--color-gray-300);
   padding: 1.6rem 2.4rem 2.99rem 2.4rem;
 }
 .section-faq .form-container {
-  background-color: #F3F6FF;
+  background-color: var(--color-gray-100);
   padding: 4.8rem 1.6rem 4.39rem 1.6rem;
   border-radius: 0.8rem;
   display: flex;
@@ -257,15 +331,15 @@ header, section, footer {
   height: 100%;
   padding-left: 4.8rem;
   border-radius: 0.8rem 0 0 0.8rem;
-  border: 1px solid #D4D7E5;
+  border: 1px solid var(--color-gray-400);
   width: 100%;
   font-size: 1.6rem;
 }
 .section-faq .form-container .form .container input::-moz-placeholder {
-  color: #B4B7C9;
+  color: var(--color-gray-500);
 }
 .section-faq .form-container .form .container input::placeholder {
-  color: #B4B7C9;
+  color: var(--color-gray-500);
 }
 
 .footer {
@@ -280,28 +354,33 @@ header, section, footer {
 }
 .btn--toggle {
   width: 4.6rem;
-  height: 2.4rem;
-  background: #9397AD;
+  height: 2.3rem;
+  background: var(--color-gray-600);
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  border-radius: 4.6rem;
+  border-radius: 2.3rem;
   position: relative;
   outline: none;
-  cursor: pointer;
   transition: 0.5s;
 }
 .btn--toggle::before {
   content: "";
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 2.3rem;
+  height: 2.3rem;
   position: absolute;
   top: 0;
   left: 0;
-  background: #fff;
+  background: var(--color-white);
   border-radius: 50%;
   transform: scale(0.75);
   transition: 0.5s;
+}
+.btn--toggle:checked {
+  background: var(--color-primary);
+}
+.btn--toggle:checked::before {
+  left: 2.25rem;
 }
 .btn--mobile-menu {
   background-color: transparent;
@@ -309,12 +388,12 @@ header, section, footer {
   height: 3.6rem;
 }
 .btn--download {
-  background-color: #131022;
+  background-color: var(--color-gray-900);
   padding: 1rem;
   border-radius: 0.8rem;
 }
 .btn--discover-more {
-  background-color: #fff;
+  background-color: var(--color-white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -323,21 +402,23 @@ header, section, footer {
   border-radius: 50%;
   box-shadow: 0 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0 2px 6.4px -1px rgba(19, 16, 34, 0.03);
 }
+.btn--discover-more .down-arrow {
+  width: 1.2rem;
+  height: 0.8rem;
+}
 .btn--faq {
-  background-color: #F3F6FF;
+  background-color: var(--color-gray-100);
   padding: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-}
-.btn--faq .icon {
-  width: 1rem;
-  height: 1rem;
+  width: 3.6rem;
+  height: 3.6rem;
 }
 .btn--primary {
-  background-color: #6366F1;
-  color: #fff;
+  background-color: var(--color-primary);
+  color: var(--color-white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -363,31 +444,8 @@ header, section, footer {
   line-height: 2.56rem;
 }
 
-.paragraph {
-  color: #585C7B;
-  font-weight: 400;
-  line-height: 160%;
-}
-.paragraph--header {
-  color: #131022;
-  font-weight: 600;
-  display: none;
-}
-.paragraph--large {
-  font-size: 1.8rem;
-}
-.paragraph--medium {
-  font-size: 1.6rem;
-}
-.paragraph--small {
-  font-size: 1.4rem;
-}
-.paragraph--light-grey {
-  color: #9397AD;
-}
-
-h1, h2, h3, h4 {
-  color: #131022;
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-gray-900);
   font-weight: 800;
 }
 
@@ -420,4 +478,27 @@ h6 {
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 130%;
+}
+
+.paragraph {
+  color: var(--color-gray-700);
+  font-weight: 400;
+  line-height: 160%;
+}
+.paragraph--header {
+  color: var(--color-gray-700);
+  font-weight: 600;
+  display: none;
+}
+.paragraph--large {
+  font-size: 1.8rem;
+}
+.paragraph--medium {
+  font-size: 1.6rem;
+}
+.paragraph--small {
+  font-size: 1.4rem;
+}
+.paragraph--light-grey {
+  color: var(--color-gray-600);
 }/*# sourceMappingURL=style.css.map */
