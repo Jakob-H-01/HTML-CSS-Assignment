@@ -33,26 +33,43 @@
         </header>
         <main>
           <section class="section-hero">
-            <h1>Manage All Your Money in One App</h1>
-            <p class="paragraph paragraph--large">We offer you a new generation of the mobile banking. Save, spend & manage money in your pocket.</p>
-            <div class="link-container">
-              <a href="#" class="btn btn--download"><img class="icon-appstore" src="/images/appstore-light.svg" alt="app store link"></a>
-              <a href="#" class="btn btn--download"><img class="icon-googleplay" src="/images/googleplay-light.svg" alt="google play link"></a>
+            <h1>Manage All Your <br>Money in One App</h1>
+            <div class="container">
+              <p class="paragraph paragraph--large paragraph--hero"><span>We offer you a new generation of the mobile banking. </span><span>Save, spend & manage money in your pocket.</span></p>
+              <div class="link-container">
+                <a href="#" class="btn btn--download"><img class="icon-appstore" src="/images/appstore-light.svg" alt="app store link"></a>
+                <a href="#" class="btn btn--download"><img class="icon-googleplay" src="/images/googleplay-light.svg" alt="google play link"></a>
+              </div>
+              <div class="button-container">
+                <button class="btn btn--discover-more"><img class="down-arrow" src="/images/down-arrow-light.svg" alt="down arrow"></button>
+                <p class="paragraph paragraph--small">Discover more</p>
+              </div>
             </div>
-            <div class="button-container">
-              <button class="btn btn--discover-more"><img class="down-arrow" src="/images/down-arrow-light.svg" alt="down arrow"></button>
-              <p class="paragraph paragraph--small">Discover more</p>
+            <div class="image-container">
+              <img class="phone-back" src="/images/phone-hero-1.svg" alt="phone">
+              <img class="phone-front" src="/images/phone-hero-2.svg" alt="phone">
             </div>
-            <div class="image-container"></div>
           </section>
           <section class="section-features" id="section-features">
             <div class="logos">
-              <img src="/images/logoipsum.svg" alt="logo">
-              <img src="/images/logoipsum-2.svg" alt="logo">
-              <img src="/images/logoipsum-3.svg" alt="logo">
-              <img src="/images/logoipsum-4.svg" alt="logo">
-              <img src="/images/logoipsum-5.svg" alt="logo">
-              <img src="/images/logoipsum-6.svg" alt="logo">
+              <div class="container">
+                <img src="/images/logoipsum.svg" alt="logo">
+              </div>
+              <div class="container">
+                <img src="/images/logoipsum-2.svg" alt="logo">
+              </div>
+              <div class="container">
+                <img src="/images/logoipsum-3.svg" alt="logo">
+              </div>
+              <div class="container">
+                <img src="/images/logoipsum-4.svg" alt="logo">
+              </div>
+              <div class="container">
+                <img src="/images/logoipsum-5.svg" alt="logo">
+              </div>
+              <div class="container">
+                <img src="/images/logoipsum-6.svg" alt="logo">
+              </div>
             </div>
             <div class="inner-container">
               <img class="phone" src="/images/phone-1.svg" alt="phone">
@@ -121,13 +138,15 @@
           <section class="section-instructions">
             <h2>How Does It Work?</h2>
             <div class="phones-container">
+              <img class="phone-side" src="/images/phone-1-screen.svg" alt="phone">
               <div class="phone">
-                <img src="/images/phone-2-frame.svg" alt="">
-                <img class="phone-screen" src="/images/phone-2-screen.svg" alt="">
+                <img class="phone-frame" src="/images/phone-2-frame.svg" alt="frame">
+                <img class="phone-screen" src="/images/phone-2-screen.svg" alt="screen">
               </div>
+              <img class="phone-side" src="/images/phone-3-screen.svg" alt="phone">
             </div>
             <div class="text-container">
-              <h4>Transfers to people from your contact list</h4>
+              <h4><span>Step 3. </span>Transfers to people from your contact list</h4>
               <p class="paragraph paragraph--medium">Proin volutpat mollis egestas. Nam luctus facilisis
                 ultrices. Pellentesque volutpat ligula est. Mattis
                 fermentum, at nec lacus.</p>
@@ -136,7 +155,7 @@
           <section class="section-faq">
             <div class="faq-container">
               <div class="faq-lead">
-                <h3>Any questions? Check out the FAQs</h3>
+                <h3><span>Any questions? </span><span>Check out the FAQs</span></h3>
                 <p class="paragraph paragraph--large">Still have unanswered questions and need to get in touch?</p>
               </div>
               <div class="faq">
@@ -144,9 +163,9 @@
                   <li>
                     <div class="question">
                       <h6>Is any of my personal information stored in the App?</h6>
-                      <button class="btn btn--faq btn--primary"><img class="faq-arrow-active" src="/images/faq-up-arrow.svg" alt="down arrow"></button>
+                      <button class="btn btn--faq btn--primary"><img class="faq-arrow active-arrow" src="/images/faq-up-arrow.svg" alt="down arrow"></button>
                     </div>
-                    <p class="paragraph paragraph--small active">Nunc duis id aenean gravida tincidunt eu, tempor
+                    <p class="paragraph paragraph--small active hide-tablet">Nunc duis id aenean gravida tincidunt eu, tempor
                       ullamcorper. Viverra aliquam arcu, viverra et,
                       cursus. Aliquet pretium cursus adipiscing gravida
                       et consequat lobortis arcu velit. Nibh pharetra
@@ -168,12 +187,12 @@
                     </div>
                     <p></p>
                   </li>
-                  <li>
+                  <li class="active-question">
                     <div class="question">
                       <h6>Can I schedule future transfers?</h6>
                       <button class="btn btn--faq"><img class="faq-arrow" src="/images/faq-down-arrow-light.svg" alt="down arrow"></button>
                     </div>
-                    <p></p>
+                    <p class="paragraph paragraph--small active hide-mobile">Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
                   </li>
                   <li>
                     <div class="question">
@@ -199,6 +218,18 @@
                 </ul>
               </div>
               <button class="btn btn--primary btn--primary--medium">Contact us now</button>
+              <div class="contact-boxes">
+                <div class="contact-box">
+                  <img src="/images/phone-icon.svg" alt="phone icon">
+                  <p class="paragraph paragraph--small">Still have questions?</p>
+                  <button class="btn btn--contact btn--contact--primary">Contact us<img src="/images/arrow-purple.svg" alt="arrow"></button>
+                </div>
+                <div class="contact-box">
+                  <img src="/images/message-icon.svg" alt="message icon">
+                  <p class="paragraph paragraph--small">Don't like phone calls?</p>
+                  <button class="btn btn--contact btn--contact--success">Contact us<img src="/images/arrow-green.svg" alt="arrow"></button>
+                </div>
+              </div>
             </div>
             <div class="form-container">
               <div class="form-heading">
@@ -216,7 +247,7 @@
           </section>
         </main>
         <footer class="footer">
-          <p class="paragraph paragraph--small paragraph--light-grey">&copy; 2024 Silicon. All rights reserved. <br>Credit MadrasThemes</p>
+          <p class="paragraph paragraph--small paragraph--light-grey"><span>&copy; 2024 Silicon. All rights reserved. </span><span>Credit MadrasThemes</span></p>
         </footer>
     </div>
   </body>

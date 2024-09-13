@@ -1,5 +1,6 @@
 :root {
   --color-primary: #6366F1;
+  --color-success: #22C55E;
   --color-white: #fff;
   --color-background: #fff;
   --color-gray-900: #0B0F19;
@@ -25,16 +26,35 @@
 .dark-mode .header .nav-container .nav-links-link a {
   color: rgba(255, 255, 255, 0.85);
 }
+.dark-mode .section-features .logos .container {
+  border-color: rgba(255, 255, 255, 0.15);
+}
 .dark-mode .section-features .features-items-item img {
   background: rgba(99, 102, 241, 0.08);
 }
 .dark-mode .section-instructions {
   background-color: rgba(255, 255, 255, 0.04);
 }
+.dark-mode .section-faq .faq-container .faq .questions li {
+  box-shadow: 0;
+}
+@media (min-width: 768px) {
+  .dark-mode .section-faq .faq-container .faq .questions li {
+    background-color: rgba(255, 255, 255, 0.04);
+  }
+}
 .dark-mode .section-faq .faq-container .faq .questions li .question {
   border-color: rgba(255, 255, 255, 0.15);
 }
 .dark-mode .section-faq .faq-container .faq .questions li .active {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+@media (min-width: 768px) {
+  .dark-mode .section-faq .faq-container .faq .questions .active-question {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+}
+.dark-mode .section-faq .contact-boxes .contact-box {
   border-color: rgba(255, 255, 255, 0.15);
 }
 .dark-mode .section-faq .form-container {
@@ -95,6 +115,11 @@ body {
 header, section, footer {
   padding-inline: 1.2rem;
 }
+@media (min-width: 768px) {
+  header, section, footer {
+    padding-inline: 3.5rem;
+  }
+}
 
 .wrapper {
   margin: 0 auto;
@@ -107,10 +132,15 @@ header, section, footer {
   align-items: center;
   padding-block: 1.1rem;
 }
+@media (min-width: 768px) {
+  .header {
+    padding-block: 2.5rem;
+  }
+}
 .header .logo {
   display: flex;
   align-items: center;
-  gap: 0.71rem;
+  gap: 0.7rem;
   font-weight: 800;
   font-size: 2.08rem;
   line-height: 3.33rem;
@@ -139,6 +169,11 @@ header, section, footer {
   align-items: center;
   gap: 2.4rem;
 }
+@media (min-width: 768px) {
+  .header .button-container {
+    gap: 7.074rem;
+  }
+}
 .header .button-container .inner-container {
   display: flex;
   align-items: center;
@@ -147,25 +182,76 @@ header, section, footer {
 
 .section-hero {
   background: radial-gradient(circle at center 100%, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%);
-  height: 87.7vh;
   padding-block: 2.5rem 3rem;
   text-align: center;
+  display: grid;
+  gap: 1.822rem;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .section-hero {
+    padding-block: 3rem 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr;
+    -moz-column-gap: 39rem;
+         column-gap: 39rem;
+    row-gap: 12rem;
+  }
+  .section-hero h1 {
+    grid-column: 1/3;
+  }
+  .section-hero p {
+    text-align: left;
+  }
+  .section-hero .image-container {
+    grid-column: 2/-1;
+  }
+  .section-hero .container {
+    grid-column: 1;
+  }
+}
+.section-hero .container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 3.434rem;
+  height: 100%;
+}
+@media (min-width: 768px) {
+  .section-hero .container {
+    justify-content: flex-end;
+    gap: 4.1rem;
+    padding-bottom: 4.594rem;
+  }
 }
 .section-hero .link-container {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
 }
+@media (min-width: 768px) {
+  .section-hero .link-container {
+    flex-direction: row;
+  }
+}
 .section-hero .link-container .icon-appstore {
-  height: 3.4rem;
   width: 12.5rem;
+  height: 3.4rem;
+}
+@media (min-width: 768px) {
+  .section-hero .link-container .icon-appstore {
+    width: 11.34rem;
+    height: 3rem;
+  }
 }
 .section-hero .link-container .icon-googleplay {
-  height: 3.3rem;
   width: 14rem;
+  height: 3.3rem;
+}
+@media (min-width: 768px) {
+  .section-hero .link-container .icon-googleplay {
+    width: 12.75rem;
+    height: 3rem;
+  }
 }
 .section-hero .button-container {
   display: flex;
@@ -173,19 +259,69 @@ header, section, footer {
   align-items: center;
   gap: 2.239rem;
 }
+@media (min-width: 768px) {
+  .section-hero .button-container {
+    justify-content: flex-start;
+  }
+}
 .section-hero .image-container {
+  position: relative;
   display: none;
+}
+@media (min-width: 768px) {
+  .section-hero .image-container {
+    display: block;
+  }
+}
+.section-hero .image-container .phone-back {
+  position: absolute;
+  bottom: -75px;
+  right: 120px;
+  width: 24rem;
+  height: 48.5rem;
+}
+.section-hero .image-container .phone-front {
+  position: absolute;
+  bottom: -40px;
+  right: 0;
+  width: 24.4rem;
+  height: 49.3rem;
 }
 
 .section-features {
-  padding-top: 3.69rem;
-  padding-bottom: 4.42rem;
+  padding-block: 3.69rem 4.42rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+@media (min-width: 768px) {
+  .section-features {
+    padding-block: 4.8rem 10rem;
+  }
+}
 .section-features .logos {
   display: none;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .section-features .logos {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.section-features .logos .container {
+  padding: 3.3rem 0.925rem;
+  border: 1px solid var(--color-gray-300);
+  border-radius: 0.8rem;
+}
+.section-features .logos img {
+  width: 14rem;
+  height: 3.3rem;
+}
+@media (min-width: 768px) {
+  .section-features .logos > .container:not(:nth-child(-n+4)) {
+    display: none;
+  }
 }
 .section-features .phone {
   display: none;
@@ -195,6 +331,11 @@ header, section, footer {
   flex-direction: column;
   align-items: center;
   gap: 3.24rem;
+}
+@media (min-width: 768px) {
+  .section-features .features {
+    margin-top: 6.25rem;
+  }
 }
 .section-features .features-lead {
   display: flex;
@@ -209,16 +350,28 @@ header, section, footer {
   align-items: center;
   gap: 3.24rem;
 }
+@media (min-width: 768px) {
+  .section-features .features-items {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
 .section-features .features-items-row {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 3.24rem;
 }
+@media (min-width: 768px) {
+  .section-features .features-items-row {
+    flex-direction: row;
+  }
+}
 .section-features .features-items-item {
   display: flex;
   gap: 2.4rem;
   align-items: flex-start;
+  width: 100%;
 }
 .section-features .features-items-item:first-child {
   align-self: stretch;
@@ -236,27 +389,78 @@ header, section, footer {
 
 .section-instructions {
   background-color: var(--color-gray-100);
-  padding-top: 6.39rem;
-  padding-bottom: 5.64rem;
+  padding-block: 6.39rem 5.64rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 3.2rem;
 }
+@media (min-width: 768px) {
+  .section-instructions {
+    gap: 4.4rem;
+    padding-block: 7.2rem;
+  }
+}
+@media (min-width: 768px) {
+  .section-instructions .phones-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.section-instructions .phone-side {
+  display: none;
+}
+@media (min-width: 768px) {
+  .section-instructions .phone-side {
+    display: block;
+  }
+}
 .section-instructions .phone {
   position: relative;
+}
+@media (min-width: 768px) {
+  .section-instructions .phone {
+    display: grid;
+    align-items: center;
+    margin-block: -6.75rem;
+  }
+}
+@media (min-width: 768px) {
+  .section-instructions .phone-frame {
+    height: 80%;
+  }
 }
 .section-instructions .phone-screen {
   position: absolute;
   top: 0;
   left: 0;
 }
+@media (min-width: 768px) {
+  .section-instructions .phone-screen {
+    height: 80%;
+    transform: translateY(12.5%);
+  }
+}
 .section-instructions .text-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.76rem;
+}
+@media (min-width: 768px) {
+  .section-instructions .text-container {
+    margin-inline: 13rem;
+  }
+}
+.section-instructions .text-container span {
+  display: none;
+}
+@media (min-width: 768px) {
+  .section-instructions .text-container span {
+    display: inline-block;
+  }
 }
 
 .section-faq {
@@ -278,14 +482,31 @@ header, section, footer {
   gap: 1.893rem;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .section-faq .faq-container .faq-lead h3 {
+    display: grid;
+  }
+}
 .section-faq .faq-container .faq .questions {
   list-style: none;
+}
+@media (min-width: 768px) {
+  .section-faq .faq-container .faq .questions {
+    display: grid;
+    gap: 1.6rem;
+  }
 }
 .section-faq .faq-container .faq .questions > :first-child .question {
   border-radius: 0.8rem 0.8rem 0 0;
 }
 .section-faq .faq-container .faq .questions > :last-child .question {
   border-radius: 0 0 0.8rem 0.8rem;
+}
+@media (min-width: 768px) {
+  .section-faq .faq-container .faq .questions li {
+    box-shadow: 0 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0 2px 6.4px -1px rgba(19, 16, 34, 0.03);
+    border-radius: 0.8rem;
+  }
 }
 .section-faq .faq-container .faq .questions li .question {
   border: 1px solid var(--color-gray-300);
@@ -295,9 +516,50 @@ header, section, footer {
   gap: 2rem;
   padding: 1.6rem 2.4rem;
 }
+@media (min-width: 768px) {
+  .section-faq .faq-container .faq .questions li .question {
+    border: none;
+  }
+}
 .section-faq .faq-container .faq .questions li .active {
   border-inline: 1px solid var(--color-gray-300);
   padding: 1.6rem 2.4rem 2.99rem 2.4rem;
+}
+@media (min-width: 768px) {
+  .section-faq .faq-container .faq .questions li .active {
+    border: none;
+    padding-block: 0 2.4rem;
+  }
+}
+@media (min-width: 768px) {
+  .section-faq .btn--primary--medium {
+    display: none;
+  }
+}
+.section-faq .contact-boxes {
+  display: none;
+}
+@media (min-width: 768px) {
+  .section-faq .contact-boxes {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.4rem;
+  }
+}
+.section-faq .contact-boxes .contact-box {
+  border: 1px solid var(--color-gray-300);
+  border-radius: 0.8rem;
+  padding: 2.4rem 2.4rem 3.5rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.6rem;
+}
+.section-faq .contact-boxes .contact-box .btn {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
 }
 .section-faq .form-container {
   background-color: var(--color-gray-100);
@@ -308,14 +570,32 @@ header, section, footer {
   gap: 3.08rem;
   width: 100%;
 }
+@media (min-width: 768px) {
+  .section-faq .form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    padding: 7.255rem 2.4rem;
+  }
+}
 .section-faq .form-container .form-heading {
   display: flex;
   align-items: center;
   gap: 1.6rem;
 }
+@media (min-width: 768px) {
+  .section-faq .form-container .form-heading {
+    gap: 3.2rem;
+  }
+}
 .section-faq .form-container .form {
   display: flex;
   justify-content: center;
+}
+@media (min-width: 768px) {
+  .section-faq .form-container .form {
+    height: 5.23rem;
+  }
 }
 .section-faq .form-container .form .container {
   position: relative;
@@ -345,12 +625,38 @@ header, section, footer {
 .footer {
   padding-top: 2.6rem;
   padding-bottom: 3rem;
-  text-align: center;
+  display: grid;
+  place-items: center;
+}
+.footer p {
+  display: grid;
+  place-items: center;
+}
+@media (min-width: 768px) {
+  .footer p {
+    display: inline-block;
+  }
+}
+
+.hide-mobile {
+  display: none;
+}
+@media (min-width: 768px) {
+  .hide-mobile {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .hide-tablet {
+    display: none;
+  }
 }
 
 .btn {
   cursor: pointer;
   border: none;
+  background-color: transparent;
 }
 .btn--toggle {
   width: 4.6rem;
@@ -389,8 +695,10 @@ header, section, footer {
 }
 .btn--download {
   background-color: var(--color-gray-900);
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   border-radius: 0.8rem;
+  display: grid;
+  place-items: center;
 }
 .btn--discover-more {
   background-color: var(--color-white);
@@ -443,6 +751,17 @@ header, section, footer {
   font-size: 1.6rem;
   line-height: 2.56rem;
 }
+.btn--contact {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 160%;
+}
+.btn--contact--primary {
+  color: var(--color-primary);
+}
+.btn--contact--success {
+  color: var(--color-success);
+}
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--color-gray-900);
@@ -452,6 +771,13 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 3.41rem;
   line-height: 130%;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 4.43rem;
+    display: grid;
+    place-items: center;
+  }
 }
 
 h2 {
@@ -489,6 +815,16 @@ h6 {
   color: var(--color-gray-700);
   font-weight: 600;
   display: none;
+}
+@media (min-width: 768px) {
+  .paragraph--header {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  .paragraph--hero {
+    display: grid;
+  }
 }
 .paragraph--large {
   font-size: 1.8rem;

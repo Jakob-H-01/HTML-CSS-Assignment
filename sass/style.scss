@@ -12,6 +12,7 @@ $font-size-small: 1.4rem;
 
 :root {
   --color-primary: #6366F1;
+  --color-success: #22C55E;
   --color-white: #fff;
   --color-background: #fff;
   --color-gray-900: #0B0F19;
@@ -62,6 +63,12 @@ $font-size-small: 1.4rem;
   }
 
   .section-features {
+    .logos {  
+      .container {
+        border-color: rgba(255, 255, 255, 0.15);
+      }
+    }
+
     .features {
       &-items {
         &-item {
@@ -82,6 +89,12 @@ $font-size-small: 1.4rem;
       .faq {
         .questions {    
           li {
+            box-shadow: 0;
+            
+            @media (min-width: 768px) {
+              background-color: rgba(255, 255, 255, 0.04);
+            }
+
             .question {
               border-color: rgba(255, 255, 255, 0.15);
             }
@@ -90,7 +103,19 @@ $font-size-small: 1.4rem;
               border-color: rgba(255, 255, 255, 0.15);
             }
           }
+
+          .active-question {
+            @media (min-width: 768px) {
+              border: 1px solid rgba(255, 255, 255, 0.15);
+            }
+          }
         }
+      }
+    }
+
+    .contact-boxes {
+      .contact-box {
+        border-color: rgba(255, 255, 255, 0.15);
       }
     }
   
@@ -166,6 +191,10 @@ body {
 
 header, section, footer {
   padding-inline: 1.2rem;
+
+  @media (min-width: 768px) {
+    padding-inline: 3.5rem;
+  }
 }
 
 .wrapper {
@@ -179,10 +208,14 @@ header, section, footer {
   align-items: center;
   padding-block: 1.1rem;
 
+  @media (min-width: 768px) {
+    padding-block: 2.5rem; 
+  }
+
   .logo {
     display: flex;
     align-items: center;
-    gap: 0.71rem;
+    gap: 0.7rem;
     font-weight: 800;
     font-size: 2.08rem;
     line-height: 3.33rem;
@@ -216,6 +249,10 @@ header, section, footer {
     align-items: center;
     gap: 2.4rem;
 
+    @media (min-width: 768px) {
+      gap: 7.074rem;
+    }
+
     .inner-container {
       display: flex;
       align-items: center;
@@ -226,50 +263,163 @@ header, section, footer {
 
 .section-hero {
   background: radial-gradient(circle at center 100%, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%);
-  height: 87.7vh;
+  // height: 87.7vh;
   padding-block: 2.5rem 3rem;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  gap: 1.822rem;
+  overflow: hidden;
+  
+  @media (min-width: 768px) {
+    padding-block: 3rem 0;
+    // height: 86.7vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr;
+    column-gap: 39rem;
+    row-gap: 12rem;
 
+    h1 {
+      grid-column: 1 / 3;
+      // grid-area: heading;
+      // border: 5px solid brown;
+    }
+
+    p {
+      text-align: left;
+    }
+
+    .image-container {
+      grid-column: 2 / -1;
+      // border: 5px solid brown;
+      // grid-area: images;
+      // max-width: 200px;
+    }
+
+    .container {
+      grid-column: 1;
+    }
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 3.434rem;
+    // justify-content: space-between;
+    height: 100%;
+    
+    @media (min-width: 768px) {
+      // border: 5px solid brown;
+      justify-content: flex-end;
+      // align-items: center;
+      gap: 4.1rem;
+      padding-bottom: 4.594rem;
+      // margin-bottom: 4.594rem;
+    }
+  }
+  
   .link-container {
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
 
-    .icon-appstore {
-      height: 3.4rem;
-      width: 12.5rem;
+    @media (min-width: 768px) {
+      flex-direction: row;
     }
+    
+    .icon-appstore {
+      width: 12.5rem;
+      height: 3.4rem;
 
+      @media (min-width: 768px) {
+        width: 11.34rem;
+        height: 3rem;
+      }
+    }
+    
     .icon-googleplay {
-      height: 3.3rem;
       width: 14rem;
+      height: 3.3rem;
+
+      @media (min-width: 768px) {
+        width: 12.75rem;
+        height: 3rem;
+      }
     }
   }
-
+  
   .button-container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2.239rem;
-  }
 
+    @media (min-width: 768px) {
+      justify-content: flex-start;
+    }
+  }
+  
   .image-container {
+    position: relative;
     display: none;
+    
+    @media (min-width: 768px) {
+      display: block;
+    }
+
+    .phone-back {
+      position: absolute;
+      bottom: -75px;
+      right: 120px;
+      width: 24rem;
+      height: 48.5rem;
+    }
+
+    .phone-front {
+      position: absolute;
+      bottom: -40px;
+      right: 0;
+      width: 24.4rem;
+      height: 49.3rem;
+    }
   }
 }
 
 .section-features {
-  padding-top: 3.69rem;
-  padding-bottom: 4.42rem;
+  padding-block: 3.69rem 4.42rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 
+  @media (min-width: 768px) {
+    padding-block: 4.8rem 10rem;
+  }
+
   .logos {
     display: none;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+      // gap: 2.4rem;
+    }
+
+    .container {
+      padding: 3.3rem 0.925rem;
+      border: 1px solid var(--color-gray-300);
+      border-radius: 0.8rem;
+    }
+
+    img {
+      width: 14rem;
+      height: 3.3rem;
+    }
+
+    & > .container:not(:nth-child(-n+4)) {
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
   }
 
   .phone {
@@ -281,6 +431,11 @@ header, section, footer {
     flex-direction: column;
     align-items: center;
     gap: 3.24rem;
+
+    @media (min-width: 768px) {
+      margin-top: 6.25rem;
+    }
+    
     
     &-lead {
       display: flex;
@@ -295,18 +450,28 @@ header, section, footer {
       flex-direction: column;
       align-items: center;
       gap: 3.24rem;
+
+      @media (min-width: 768px) {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+      }
       
       &-row {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 3.24rem;
+        
+        @media (min-width: 768px) {
+          flex-direction: row;
+        }
       }
 
       &-item {
         display: flex;
         gap: 2.4rem;
         align-items: flex-start;
+        width: 100%;
       
         &:first-child {
           align-self: stretch;
@@ -330,21 +495,58 @@ header, section, footer {
 
 .section-instructions {
   background-color: var(--color-gray-100);
-  padding-top: 6.39rem;
-  padding-bottom: 5.64rem;
+  padding-block: 6.39rem 5.64rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 3.2rem;
 
+  @media (min-width: 768px) {
+    gap: 4.4rem;
+    padding-block: 7.2rem;
+  }
+
+  .phones-container {
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .phone-side {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+
   .phone {
     position: relative;
+
+    @media (min-width: 768px) {
+      display: grid;
+      align-items: center;
+      margin-block: -6.75rem;
+    }
+
+    &-frame {
+      @media (min-width: 768px) {
+        height: 80%;
+      }
+    }
 
     &-screen {
       position: absolute;
       top: 0;
       left: 0;
+
+      @media (min-width: 768px) {
+        height: 80%;
+        transform: translateY(12.5%);
+      }
     }
   }
 
@@ -353,6 +555,18 @@ header, section, footer {
     flex-direction: column;
     align-items: center;
     gap: 0.76rem;
+
+    @media (min-width: 768px) {
+      margin-inline: 13rem;
+    }
+
+    span {
+      display: none;
+
+      @media (min-width: 768px) {
+        display: inline-block;
+      }
+    }
   }
 }
 
@@ -374,11 +588,22 @@ header, section, footer {
       flex-direction: column;
       gap: 1.893rem;
       text-align: center;
+
+      h3 {
+        @media (min-width: 768px) {
+          display: grid;
+        }
+      }
     }
 
     .faq {
       .questions {
         list-style: none;
+
+        @media (min-width: 768px) {
+          display: grid;
+          gap: 1.6rem;
+        }
         
         > :first-child {
           .question {
@@ -393,6 +618,11 @@ header, section, footer {
         }
         
         li {
+          @media (min-width: 768px) {
+            box-shadow: (0 4.4px 12px -1px rgba(#131022, 0.06), 0 2px 6.4px -1px rgba(#131022, 0.03));
+            border-radius: 0.8rem;   
+          }
+
           .question {
             border: 1px solid var(--color-gray-300);
             display: flex;
@@ -400,13 +630,55 @@ header, section, footer {
             justify-content: space-between;
             gap: 2rem;
             padding: 1.6rem 2.4rem;
+
+            @media (min-width: 768px) {
+              border: none;
+            }
           }
           
           .active {
             border-inline: 1px solid var(--color-gray-300);
             padding: 1.6rem 2.4rem 2.99rem 2.4rem;
+            
+            @media (min-width: 768px) {
+              border: none;
+              padding-block: 0 2.4rem;
+            }
           }
         }
+      }
+    }
+  }
+
+  .btn--primary--medium {
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .contact-boxes {
+    display: none;
+    
+    @media (min-width: 768px) {
+      display: grid;
+      width: 100%;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.4rem;
+    }
+
+    .contact-box {
+      border: 1px solid var(--color-gray-300);
+      border-radius: 0.8rem;
+      padding: 2.4rem 2.4rem 3.5rem 2.4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.6rem;
+
+      .btn {
+        display: flex;
+        align-items: center;
+        gap: 1.3rem;
       }
     }
   }
@@ -420,15 +692,31 @@ header, section, footer {
     gap: 3.08rem;
     width: 100%;
 
+    @media (min-width: 768px) {
+      // flex-direction: row;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      place-items: center;
+      padding: 7.255rem 2.4rem;
+    }
+
     .form-heading {
       display: flex;
       align-items: center;
       gap: 1.6rem;
+
+      @media (min-width: 768px) {
+        gap: 3.2rem;
+      }
     }
 
     .form {
       display: flex;
       justify-content: center;
+
+      @media (min-width: 768px) {
+        height: 5.23rem;
+      }
       
       .container {
         position: relative;
@@ -461,12 +749,37 @@ header, section, footer {
 .footer {
   padding-top: 2.6rem;
   padding-bottom: 3rem;
-  text-align: center;
+  display: grid;
+  place-items: center;
+
+  p {
+    display: grid;
+    place-items: center;
+
+    @media (min-width: 768px) {
+      display: inline-block;
+    }
+  }
+}
+
+.hide-mobile {
+  display: none;
+  
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+.hide-tablet {
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
 
 .btn {
   cursor: pointer;
   border: none;
+  background-color: transparent;
 
   &--toggle {
     width: 4.6rem;
@@ -508,8 +821,10 @@ header, section, footer {
 
   &--download {
     background-color: var(--color-gray-900);
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     border-radius: 0.8rem;
+    display: grid;
+    place-items: center;
   }
 
   &--discover-more {
@@ -572,6 +887,20 @@ header, section, footer {
       line-height: 2.56rem;
     }
   }
+
+  &--contact {
+    font-size: $font-size-small;
+    font-weight: 600;
+    line-height: 160%;
+
+    &--primary {
+      color: var(--color-primary);
+    }
+
+    &--success {
+      color: var(--color-success);
+    }
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -582,6 +911,14 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 3.41rem;
   line-height: 130%;
+
+  @media (min-width: 768px) {
+    font-size: 4.43rem;
+    // text-align: center;
+    display: grid;
+    place-items: center;
+    // height: fit-content;
+  }
 }
 
 h2 {
@@ -619,6 +956,16 @@ h6 {
     color: var(--color-gray-700);
     font-weight: 600;
     display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+
+  &--hero {
+    @media (min-width: 768px) {
+      display: grid;
+    }
   }
 
   &--large {
