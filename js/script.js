@@ -6,6 +6,10 @@ const downArrow = document.querySelector('.down-arrow');
 const faqArrow = document.querySelectorAll('.faq-arrow');
 const faqBtn = document.querySelectorAll('.btn--faq');
 const mail = document.querySelector('.mail');
+const phoneMiddle = document.querySelector('.phone-middle');
+const phoneScreensSide = document.querySelectorAll('.phone-side');
+const instructionsHeading = document.querySelector('#instructions-heading');
+const instructionsParagraph = document.querySelector('#instructions-paragraph');
 
 button.addEventListener('click', () => {
   if (document.body.classList.contains('dark-mode')) {
@@ -65,9 +69,32 @@ function changeActiveFaqArrow(mediaQuery) {
   }
 }
 
+function changePhoneImages(mediaQueryDesktop) {
+  if (mediaQueryDesktop.matches) {
+    phoneMiddle.setAttribute('src', '/images/phone-middle-desktop.svg');
+    phoneScreensSide[0].setAttribute('src', '/images/phone-1-screen-desktop.svg');
+    phoneScreensSide[1].setAttribute('src', '/images/phone-3-screen-desktop.svg');
+    instructionsHeading.innerHTML = "Latest transaction history";
+    instructionsParagraph.innerHTML = "Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique <span>quisque hac in consectetur condimentum.</span>";
+  } else {
+    phoneMiddle.setAttribute('src', '/images/phone-middle.svg');
+    phoneScreensSide[0].setAttribute('src', '/images/phone-1-screen.svg');
+    phoneScreensSide[1].setAttribute('src', '/images/phone-3-screen.svg');
+    instructionsHeading.innerHTML = "<span>Step 3. </span>Transfers to people from your contact list";
+    instructionsParagraph.innerHTML = "Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.";
+  }
+}
+
 let mediaQuery = window.matchMedia("(min-width: 768px)")
 changeActiveFaqArrow(mediaQuery);
 
+let mediaQueryDesktop = window.matchMedia("(min-width: 1400px)")
+changePhoneImages(mediaQueryDesktop);
+
 mediaQuery.addEventListener("change", function() {
   changeActiveFaqArrow(mediaQuery);
+});
+
+mediaQueryDesktop.addEventListener("change", function() {
+  changePhoneImages(mediaQueryDesktop);
 });
