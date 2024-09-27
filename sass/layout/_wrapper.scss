@@ -1,0 +1,20 @@
+.wrapper {
+  margin: 0 auto;
+  background-color: var(--color-background);
+}
+
+header, section, footer {
+  padding-inline: 1.2rem;
+
+  @include media(tablet) {
+    padding-inline: 3.5rem;
+  }
+  
+  @include media(desktop) {
+    padding-inline: 15rem;     
+  }
+
+  @include media(desktop-large) {
+    padding-inline: 31.2rem;
+  }
+}

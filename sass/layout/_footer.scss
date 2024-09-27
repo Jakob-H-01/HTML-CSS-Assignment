@@ -1,0 +1,18 @@
+.footer {
+  padding-block: 2.6rem 3rem;
+  display: grid;
+  place-items: center;
+
+  @include media(desktop) {
+    padding-block: 5.4rem;
+  }
+
+  p {
+    display: grid;
+    place-items: center;
+
+    @include media(tablet) {
+      display: inline-block;
+    }
+  }
+}

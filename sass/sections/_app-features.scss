@@ -1,0 +1,154 @@
+.section-app-features {
+  padding-block: 3.69rem 4.42rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include media(tablet) {
+    padding-block: 4.8rem 10rem;
+  }
+
+  @include media(desktop) {
+    padding-block: 9.6rem 11.2rem;
+  }
+
+  .logos {
+    display: none;
+    width: 100%;
+
+    @include media(tablet) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .container {
+      padding: 3.3rem 0.925rem;
+      border: 1px solid var(--color-border);
+      border-radius: 0.8rem;
+
+      @include media(desktop-large) {
+        padding: 3.5rem 2.8rem;
+      }
+    }
+
+    img {
+      width: 14rem;
+      height: 3.3rem;
+    }
+
+    & > .container:not(:nth-child(-n+4)) {
+      @media (min-width: 768px) {
+        display: none;
+      }
+
+      @include media(desktop-small) {
+        display: flex;
+      }
+    }
+  }
+
+  .inner-container {
+    @include media(desktop) {
+      display: grid;
+      grid-template-columns: auto auto;
+      margin-top: 11.2rem;
+      gap: 8rem;
+    }
+
+    @include media(desktop-large) {
+      gap: 20.2rem;
+    }
+  }
+
+  .phone {
+    display: none;
+
+    @include media(desktop) {
+      display: block;
+      width: 34.8rem;
+      height: 68.4rem;
+    }
+  }
+
+  .features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.24rem;
+
+    @include media(tablet) {
+      margin-top: 6.25rem;
+    }
+
+    @include media(desktop) {
+      margin-top: 0;
+    }
+    
+    &-lead {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 2.369rem;
+
+      @include media(desktop) {
+        text-align: left;
+        align-items: flex-start;
+      }
+    }
+    
+    &-items {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3.24rem;
+
+      @include media(tablet) {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+      }
+
+      @include media(desktop-large) {
+        gap: 4.8rem;
+      }
+      
+      &-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3.24rem;
+        
+        @include media(tablet) {
+          flex-direction: row;
+        }
+
+        @include media(desktop-large) {
+          gap: 5.6rem;
+        }
+      }
+
+      &-item {
+        display: flex;
+        gap: 2.4rem;
+        align-items: flex-start;
+        width: 100%;
+      
+        &:first-child {
+          align-self: stretch;
+        }
+        
+        img {
+          background: var(--color-icon-box);
+          padding: 1.6rem;
+          border-radius: 0.8rem;
+        }
+
+        &-text {
+          display: flex;
+          flex-direction: column;
+          gap: 1.16rem;
+        }
+      }
+    }
+  }
+}

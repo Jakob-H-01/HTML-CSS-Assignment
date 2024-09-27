@@ -1,0 +1,33 @@
+$breakpoints: (
+  'tablet': 768px,
+  'desktop-small': 1280px,
+  'desktop': 1400px,
+  'desktop-large': 1920px
+);
+
+$font-size-large: 1.8rem;
+$font-size-medium: 1.6rem;
+$font-size-small: 1.4rem;
+
+:root {
+  --color-primary: #6366F1;
+  --color-success: #22C55E;
+  --color-white: #fff;
+  --color-gray: #9397AD;
+  --color-header: #fff;
+  --color-background: #fff;
+  --color-background-section: #F3F6FF;
+  --color-background-item: #fff;
+  --color-background-input: #fff;
+  --color-nav-link: #33354D;
+  --color-download-link: #0B0F19;
+  --color-heading: #0B0F19;
+  --color-paragraph: #565973;
+  --color-paragraph-header: #565973;
+  --color-paragraph-light: #9397AD;
+  --color-button-discover: #fff;
+  --color-icon-box: rgb(99, 102, 241, 0.08);
+  --color-border: #E2E5F1;
+  --color-border-input: #D4D7E5;
+  --color-input-placeholder: #B4B7C9;
+}

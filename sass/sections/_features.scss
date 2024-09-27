@@ -1,0 +1,73 @@
+.section-features {
+  display: none;
+
+  @include media(desktop) {
+    display: grid;
+    gap: 8rem;
+    padding-block: 11.2rem;
+
+    & > :first-child {
+      gap: 16.7rem;
+    }
+    
+    & > :last-child {
+      gap: 2.4rem;
+    }
+  }
+
+  @include media(desktop-large) {
+    padding: 11.2rem 42.2rem;
+
+    & > :first-child {
+      gap: 14.3rem;
+    }
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+  }
+
+  .info-box {
+    display: grid;
+    gap: 4rem;
+    justify-items: flex-start;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+  }
+  
+  .bullet-points {
+    display: grid;
+    gap: 1.2rem;
+  }
+  
+  .bullet-point {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .features {
+    display: flex;
+    gap: 3rem;
+
+    img {
+      background-color: var(--color-icon-box);
+      padding: 1.6rem;
+      border-radius: 0.8rem;
+    }
+  }
+
+  .feature {
+    display: grid;
+    gap: 1.6rem;
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+}

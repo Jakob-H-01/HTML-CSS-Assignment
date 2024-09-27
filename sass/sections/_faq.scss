@@ -1,0 +1,227 @@
+.section-faq {
+  padding-top: 4.305rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.25rem;
+
+  @include media(desktop) {
+    padding-top: 11.2rem;     
+    gap: 11.2rem;
+  }
+
+  .faq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5.6rem;
+
+    @include media(desktop) {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      grid-template-rows: auto 1fr;
+      align-items: flex-start;
+      row-gap: 4rem;
+      column-gap: 8rem;
+    }
+    
+    @include media(desktop-large) {
+      grid-template-columns: 5fr 9fr;
+      column-gap: 13.4rem;
+    }
+    
+    .faq-lead {
+      display: flex;
+      flex-direction: column;
+      gap: 1.9rem;
+      text-align: center;
+
+      @include media(desktop) {
+        text-align: left;
+        gap: 3.2rem;
+      }
+
+      h3 {
+        @include media(tablet) {
+          display: grid;
+        }
+      }
+    }
+
+    .faq {
+      @include media(desktop) {
+        grid-row: span 2;
+      }
+
+      .questions {
+        list-style: none;
+
+        @include media(tablet) {
+          display: grid;
+          gap: 1.6rem;
+        }
+        
+        > :first-child {
+          .question {
+            border-radius: 0.8rem 0.8rem 0 0;
+          }
+        }
+        
+        > :last-child {
+          .question {
+            border-radius: 0 0 0.8rem 0.8rem;
+          }
+        }
+
+        .active-question {
+          border: 1px solid var(--color-border);
+        }
+        
+        li {
+          @include media(tablet) {
+            box-shadow: (0 4.4px 12px -1px rgba(#131022, 0.06), 0 2px 6.4px -1px rgba(#131022, 0.03));
+            border-radius: 0.8rem;   
+            background-color: var(--color-background-item);
+          }
+
+          .question {
+            border: 1px solid var(--color-border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            padding: 1.6rem 2.4rem;
+
+            @include media(tablet) {
+              border: none;
+            }
+          }
+          
+          .active {
+            border-inline: 1px solid var(--color-border);
+            padding: 1.6rem 2.4rem 2.99rem 2.4rem;
+            
+            @include media(tablet) {
+              border: none;
+              padding-block: 0 2.4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .btn--primary--medium {
+    @include media(tablet) {
+      display: none;
+    }
+  }
+
+  .contact-boxes {
+    display: none;
+    
+    @include media(tablet) {
+      display: grid;
+      width: 100%;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.4rem;
+    }
+
+    .contact-box {
+      border: 1px solid var(--color-border);
+      border-radius: 0.8rem;
+      padding: 2.4rem 2.4rem 3.5rem 2.4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.6rem;
+
+      .btn {
+        display: flex;
+        align-items: center;
+        gap: 1.3rem;
+      }
+    }
+  }
+
+  .form-container {
+    background-color: var(--color-background-section);
+    padding: 4.8rem 1.6rem 4.39rem 1.6rem;
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.1rem;
+    width: 100%;
+
+    @include media(tablet) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      place-items: center;
+      padding: 7.2rem 2.4rem;
+    }
+    
+    @include media(desktop) {
+      padding: 7.2rem 4rem;
+      gap: 4rem;
+      grid-template-columns: 10fr 9fr;
+    }
+    
+    @include media(desktop-large) {
+      padding: 7.2rem 11rem;
+      gap: 7.8rem;
+    }
+
+    .form-heading {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+
+      @include media(tablet) {
+        gap: 3.2rem;
+      }
+      
+      span {
+        display: none;
+
+        @include media(desktop) {
+          display: inline;
+        }
+      }
+    }
+
+    .form {
+      display: flex;
+      justify-content: center;
+
+      @include media(tablet) {
+        height: 5.23rem;
+      }
+      
+      .container {
+        position: relative;
+
+        img {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          padding-left: 1.686rem;
+        }
+
+        input {
+          height: 100%;
+          padding-left: 4.8rem;
+          border-radius: 0.8rem 0 0 0.8rem;
+          border: 1px solid var(--color-border-input);
+          background-color: var(--color-background-input);
+          width: 100%;
+          font-size: $font-size-medium;
+
+          &::placeholder {
+            color: var(--color-input-placeholder);
+          }
+        }
+      }
+    }
+  }
+}

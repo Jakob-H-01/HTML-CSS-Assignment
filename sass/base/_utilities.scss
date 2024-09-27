@@ -1,0 +1,13 @@
+.hide-mobile {
+  display: none;
+  
+  @include media(tablet) {
+    display: block;
+  }
+}
+
+.hide-tablet {
+  @include media(tablet) {
+    display: none;
+  }
+}

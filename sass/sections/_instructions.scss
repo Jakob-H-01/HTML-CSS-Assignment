@@ -1,0 +1,86 @@
+.section-instructions {
+  background-color: var(--color-background-section);
+  padding-block: 6.39rem 5.64rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 3.2rem;
+
+  @include media(tablet) {
+    gap: 4.4rem;
+    padding-block: 7.2rem;
+  }
+
+  @include media(desktop) {
+    padding-block: 8rem 9.6rem;
+  }
+
+  .phones-container {
+    @include media(tablet) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @include media(desktop) {
+      width: 100%;
+    }
+
+    @include media(desktop-large) {
+      justify-content: center;
+      gap: 10rem;
+    }
+  }
+
+  .phone-side {
+    display: none;
+
+    @include media(tablet) {
+      display: block;
+      opacity: 0.8;
+    }
+
+    @include media(desktop) {
+      width: 32.8rem;
+      height: 66.3rem;
+    }
+  }
+
+  .phone-middle {
+    @include media(tablet) {
+      width: 20.3rem;
+      height: 41.1rem;
+    }
+    
+    @include media(desktop) {
+      width: 32.8rem;
+      height: 66.3rem;
+    }
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.76rem;
+
+    @include media(tablet) {
+      margin-inline: 13rem;
+    }
+
+    span {
+      display: none;
+
+      @include media(tablet) {
+        display: inline-block;
+      }
+    }
+
+    p {
+      @include media(desktop-large) {
+        display: grid;
+      }
+    }
+  }
+}
