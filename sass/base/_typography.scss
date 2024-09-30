@@ -10,7 +10,8 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 3.41rem;
   line-height: 130%;
-
+  text-wrap: balance;
+  
   @include media(tablet) {
     font-size: 4.43rem;
     display: grid;

@@ -1,6 +1,7 @@
 $breakpoints: (
   'tablet': 768px,
-  'desktop-small': 1280px,
+  'tablet-large': 992px,
+  'desktop-small': 1200px,
   'desktop': 1400px,
   'desktop-large': 1920px
 );
@@ -14,7 +15,6 @@ $font-size-small: 1.4rem;
   --color-success: #22C55E;
   --color-white: #fff;
   --color-gray: #9397AD;
-  --color-header: #fff;
   --color-background: #fff;
   --color-background-section: #F3F6FF;
   --color-background-item: #fff;

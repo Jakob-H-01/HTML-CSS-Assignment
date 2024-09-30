@@ -9,7 +9,15 @@ header, section, footer {
   @include media(tablet) {
     padding-inline: 3.5rem;
   }
+
+  @include media(tablet-large) {
+    padding-inline: 8rem;
+  }
   
+  @include media(desktop-small) {
+    padding-inline: 9rem;     
+  }
+
   @include media(desktop) {
     padding-inline: 15rem;     
   }
