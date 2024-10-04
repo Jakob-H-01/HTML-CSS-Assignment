@@ -5,27 +5,31 @@
     display: grid;
     gap: 8rem;
     padding-block: 11.2rem;
-
-    & > :first-child {
-      gap: 16.7rem;
-    }
-    
-    & > :last-child {
-      gap: 2.4rem;
-    }
   }
 
   @include media(desktop-large) {
     padding: 11.2rem 42.2rem;
-
-    & > :first-child {
-      gap: 14.3rem;
-    }
   }
 
   .row {
     display: flex;
     align-items: center;
+  }
+
+  :first-child {
+    @include media(desktop) {
+      gap: 16.7rem;
+    }
+
+    @include media(desktop-large) {
+      gap: 14.3rem;
+    }
+  }
+  
+  :last-child {
+    @include media(desktop) {
+      gap: 2.4rem;
+    }
   }
 
   .info-box {
@@ -48,17 +52,17 @@
   .features {
     display: flex;
     gap: 3rem;
-
-    img {
-      background-color: var(--color-icon-box);
-      padding: 1.6rem;
-      border-radius: 0.8rem;
-    }
   }
 
   .feature {
     display: grid;
     gap: 1.6rem;
+  }
+  
+  .feature-icon {
+    background-color: var(--color-icon-box);
+    padding: 1.6rem;
+    border-radius: 0.8rem;
   }
 
   .btn {

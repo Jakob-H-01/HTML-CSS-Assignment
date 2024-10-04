@@ -66,19 +66,19 @@
     @include media(tablet) {
       margin-inline: 13rem;
     }
+  }
 
-    span {
-      display: none;
+  span {
+    display: none;
 
-      @include media(tablet) {
-        display: inline-block;
-      }
+    @include media(tablet) {
+      display: inline-block;
     }
+  }
 
-    p {
-      @include media(desktop-large) {
-        display: grid;
-      }
+  p {
+    @include media(desktop-large) {
+      display: grid;
     }
   }
 }
