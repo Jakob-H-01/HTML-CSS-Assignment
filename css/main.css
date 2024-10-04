@@ -29,84 +29,90 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Manrope", sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+.h1, .h2, .h3, .h4, .h5, .h6 {
   color: var(--color-heading);
   font-weight: 800;
 }
 
-h1 {
-  font-size: 3.41rem;
+.h1, .h2, .h3, .h6 {
   line-height: 130%;
+}
+
+.h4, .h5 {
+  line-height: 140%;
+}
+
+.h1 {
+  font-size: 3.41rem;
   text-wrap: balance;
 }
 @media (min-width: 768px) {
-  h1 {
+  .h1 {
     font-size: 4.43rem;
-    display: grid;
-    place-items: center;
   }
 }
 @media (min-width: 1920px) {
-  h1 {
+  .h1 {
     font-size: 5.6rem;
   }
 }
 
-h2 {
+.h2 {
   font-size: 2.79rem;
-  line-height: 130%;
 }
 @media (min-width: 768px) {
-  h2 {
+  .h2 {
     font-size: 3.35rem;
   }
 }
 @media (min-width: 1920px) {
-  h2 {
+  .h2 {
     font-size: 4rem;
   }
 }
 
-h3 {
+.h3 {
   font-size: 2.47rem;
-  line-height: 130%;
 }
 @media (min-width: 768px) {
-  h3 {
+  .h3 {
     font-size: 3.2rem;
   }
 }
 
-h4 {
+.h4 {
   font-size: 2.16rem;
-  line-height: 140%;
 }
 @media (min-width: 768px) {
-  h4 {
+  .h4 {
     font-size: 2.27rem;
   }
 }
 @media (min-width: 1920px) {
-  h4 {
+  .h4 {
     font-size: 2.4rem;
   }
 }
 
-h5 {
+.h5 {
   font-size: 2rem;
-  line-height: 140%;
 }
 
-h6 {
+.h6 {
   font-weight: 600;
   font-size: 1.6rem;
-  line-height: 130%;
+}
+@media (min-width: 768px) {
+  .h6 {
+    line-height: 160%;
+  }
 }
 
 .paragraph {
@@ -117,27 +123,6 @@ h6 {
 .paragraph--header {
   color: var(--color-paragraph-header);
   font-weight: 600;
-  display: none;
-}
-@media (min-width: 768px) {
-  .paragraph--header {
-    display: block;
-  }
-}
-@media (min-width: 768px) {
-  .paragraph--hero {
-    display: grid;
-  }
-}
-@media (min-width: 1400px) {
-  .paragraph--hero {
-    display: inline-block;
-  }
-}
-@media (min-width: 1920px) {
-  .paragraph--hero {
-    display: grid;
-  }
 }
 .paragraph--large {
   font-size: 1.8rem;
@@ -383,6 +368,9 @@ header, section, footer {
   line-height: 160%;
   text-decoration: none;
 }
+.header .nav-container .nav-links-link a:hover {
+  color: var(--color-primary);
+}
 .header .button-container {
   display: flex;
   align-items: center;
@@ -402,6 +390,14 @@ header, section, footer {
   display: flex;
   align-items: center;
   gap: 1.186rem;
+}
+.header p {
+  display: none;
+}
+@media (min-width: 768px) {
+  .header p {
+    display: block;
+  }
 }
 
 .footer {
@@ -500,6 +496,21 @@ header, section, footer {
   }
   .section-hero .container > :last-child {
     margin-top: 16.8rem;
+  }
+}
+@media (min-width: 768px) {
+  .section-hero .container > p {
+    display: grid;
+  }
+}
+@media (min-width: 1400px) {
+  .section-hero .container > p {
+    display: inline-block;
+  }
+}
+@media (min-width: 1920px) {
+  .section-hero .container > p {
+    display: grid;
   }
 }
 .section-hero .link-container {
@@ -905,9 +916,6 @@ header, section, footer {
   gap: 4rem;
   justify-items: flex-start;
 }
-.section-features h2 {
-  font-size: 3.2rem;
-}
 .section-features .bullet-points {
   display: grid;
   gap: 1.2rem;
@@ -1058,7 +1066,7 @@ header, section, footer {
   }
 }
 @media (min-width: 768px) {
-  .section-faq .faq-container .faq-lead h3 {
+  .section-faq .faq-container .faq-lead h2 {
     display: grid;
   }
 }
@@ -1248,4 +1256,5 @@ header, section, footer {
   --color-border: rgba(255, 255, 255, 0.15);
   --color-border-input: rgba(255, 255, 255, 0.18);
   --color-input-placeholder: rgba(255, 255, 255, 0.4);
+  color-scheme: dark;
 }/*# sourceMappingURL=main.css.map */

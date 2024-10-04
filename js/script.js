@@ -1,4 +1,4 @@
-const button = document.querySelector('.btn--toggle');
+const buttonDarkMode = document.querySelector('.btn--toggle');
 const hamburger = document.querySelector('.hamburger-menu');
 const appStore = document.querySelector('.icon-appstore');
 const googlePlay = document.querySelector('.icon-googleplay');
@@ -12,7 +12,8 @@ const instructionsHeading = document.querySelector('#instructions-heading');
 const instructionsParagraph = document.querySelector('#instructions-paragraph');
 const activeQuestion = document.querySelector('#active-question');
 
-button.addEventListener('click', () => {
+// Handler function for dark mode
+function handleDarkMode() {
   if (document.body.classList.contains('dark-mode')) {
     hamburger.setAttribute('src', '/images/hamburger-menu-light.svg');
     appStore.setAttribute('src', '/images/appstore-light.svg');
@@ -42,9 +43,10 @@ button.addEventListener('click', () => {
   }
   
   document.body.classList.toggle('dark-mode');
-});
+}
 
-function changeActiveFaq(mediaQuery) {
+// Handler function for tablet
+function changeInTablet(mediaQuery) {
   if (mediaQuery.matches) {
     if (document.body.classList.contains('dark-mode')) {
       faqArrow[0].setAttribute('src', '/images/faq-down-arrow-dark.svg');
@@ -76,7 +78,8 @@ function changeActiveFaq(mediaQuery) {
   }
 }
 
-function changePhoneImages(mediaQuery) {
+// Handler function for desktop
+function changeInDesktop(mediaQuery) {
   if (mediaQuery.matches) {
     phoneMiddle.setAttribute('src', '/images/phone-middle-desktop.svg');
     phoneScreensSide[0].setAttribute('src', '/images/phone-1-screen-desktop.svg');
@@ -92,16 +95,19 @@ function changePhoneImages(mediaQuery) {
   }
 }
 
+// Defining breakpoints for tablet and desktop
 let mediaQueryTablet = window.matchMedia("(min-width: 768px)")
-changeActiveFaq(mediaQueryTablet);
-
 let mediaQueryDesktop = window.matchMedia("(min-width: 1400px)")
-changePhoneImages(mediaQueryDesktop);
 
+// Calling the media query handler functions one time on page load
+changeInTablet(mediaQueryTablet);
+changeInDesktop(mediaQueryDesktop);
+
+// Event listeners
+buttonDarkMode.addEventListener('click', handleDarkMode);
 mediaQueryTablet.addEventListener("change", function() {
-  changeActiveFaq(mediaQueryTablet);
+  changeInTablet(mediaQueryTablet);
 });
-
 mediaQueryDesktop.addEventListener("change", function() {
-  changePhoneImages(mediaQueryDesktop);
+  changeInDesktop(mediaQueryDesktop);
 });

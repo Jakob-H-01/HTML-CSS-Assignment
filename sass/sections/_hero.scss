@@ -75,6 +75,20 @@
       }
     }
   }
+
+  .container > p {
+    @include media(tablet) {
+      display: grid;
+    }
+
+    @include media(desktop) {
+      display: inline-block;
+    }
+
+    @include media(desktop-large) {
+      display: grid;
+    }
+  }
   
   .link-container {
     display: flex;

@@ -1,5 +1,7 @@
+// Credit to the youtube video "Sass and BEM for beginners" by Coder Coder
 @mixin media($size) {
   @media (min-width: map-get($breakpoints, $size)) {
     @content;
   }
 }
+// End of help
