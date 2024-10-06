@@ -1,28 +1,31 @@
 .section-hero {
   background: radial-gradient(circle at center 100%, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%);
-  padding-block: 9.2rem 3rem;
-  text-align: center;
-  display: grid;
-  gap: 1.8rem;
-  overflow: hidden;
+
+  .wrapper {
+    padding-block: 9.2rem 3rem;
+    text-align: center;
+    display: grid;
+    gap: 1.8rem;
+    overflow: hidden;
+
+    @include media(tablet) {
+      padding-block: 13.4rem 0;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr auto;
+      column-gap: 15rem;
+      row-gap: 12rem;
+    }
   
-  @include media(tablet) {
-    padding-block: 13.4rem 0;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr auto;
-    column-gap: 15rem;
-    row-gap: 12rem;
-  }
-
-  @include media(desktop-small) {
-    padding-block: 17.6rem 0;
-    row-gap: 0;
-    column-gap: 14rem;
-    grid-template-rows: 0fr;
-  }
-
-  @include media(desktop-large) {
-    padding-block: 22.3rem 0;
+    @include media(desktop-small) {
+      padding-block: 17.6rem 0;
+      row-gap: 0;
+      column-gap: 14rem;
+      grid-template-rows: 0fr;
+    }
+  
+    @include media(desktop-large) {
+      padding-block: 22.3rem 0;
+    }
   }
 
   h1 {

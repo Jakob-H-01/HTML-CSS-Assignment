@@ -121,6 +121,7 @@
   display: flex;
   align-items: center;
   gap: 1.3rem;
+  text-wrap: nowrap;
 
   &--primary {
     color: var(--color-primary);

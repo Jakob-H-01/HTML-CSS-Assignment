@@ -1,13 +1,15 @@
 .section-faq {
-  padding-top: 4.305rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4.25rem;
-
-  @include media(desktop) {
-    padding-top: 11.2rem;     
-    gap: 11.2rem;
+  .wrapper {
+    padding-top: 4.305rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4.25rem;
+  
+    @include media(desktop) {
+      padding-top: 11.2rem;     
+      gap: 11.2rem;
+    }
   }
 
   .faq-container {
@@ -16,12 +18,17 @@
     align-items: center;
     gap: 5.6rem;
 
-    @include media(desktop) {
+    @include media(desktop-small) {
       display: grid;
-      grid-template-columns: 2fr 3fr;
+      grid-template-columns: 1fr 2fr;
       grid-template-rows: auto 1fr;
       align-items: flex-start;
       row-gap: 4rem;
+      column-gap: 10rem;
+    }
+    
+    @include media(desktop) {
+      grid-template-columns: 2fr 3fr;
       column-gap: 8rem;
     }
     
@@ -37,7 +44,7 @@
     gap: 1.9rem;
     text-align: center;
 
-    @include media(desktop) {
+    @include media(desktop-small) {
       text-align: left;
       gap: 3.2rem;
     }
@@ -50,7 +57,7 @@
   }
 
   .faq {
-    @include media(desktop) {
+    @include media(desktop-small) {
       grid-row: span 2;
     }
   }

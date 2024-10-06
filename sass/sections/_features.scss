@@ -2,13 +2,17 @@
   display: none;
 
   @include media(desktop) {
+    display: block;
+  }
+
+  .wrapper {
     display: grid;
     gap: 8rem;
     padding-block: 11.2rem;
-  }
 
-  @include media(desktop-large) {
-    padding: 11.2rem 42.2rem;
+    @include media(desktop-large) {
+      padding: 11.2rem 11rem;
+    }
   }
 
   .row {

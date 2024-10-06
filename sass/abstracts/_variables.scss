@@ -1,6 +1,9 @@
 // Credit to the youtube video "Sass and BEM for beginners" by Coder Coder
 $breakpoints: (
+  'mobile-medium': 480px,
+  'mobile-large': 576px,
   'tablet': 768px,
+  'tablet-medium': 880px,
   'tablet-large': 992px,
   'desktop-small': 1200px,
   'desktop': 1400px,

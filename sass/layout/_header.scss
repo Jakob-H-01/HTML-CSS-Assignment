@@ -1,18 +1,21 @@
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-block: 1.1rem;
   position: absolute;
-  width: 100%;
   top: 0;
+  width: 100%;
+  
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1.1rem;
 
-  @include media(tablet) {
-    padding-block: 2.5rem; 
-  }
-
-  @include media(desktop) {
-    padding-block: 1.6rem;
+    @include media(tablet) {
+      padding-block: 2.5rem; 
+    }
+  
+    @include media(desktop) {
+      padding-block: 1.6rem;
+    }
   }
 
   .logo {
@@ -84,13 +87,13 @@
   .btn-primary {
     display: none;
 
-    @include media(desktop) {
+    @include media(desktop-small) {
       display: flex;
     }
   }
 
   .btn-mobile-menu {
-    @include media(desktop) {
+    @include media(desktop-small) {
       display: none;
     }
   }

@@ -1,28 +1,36 @@
 .wrapper {
   margin: 0 auto;
-  background-color: var(--color-background);
-}
+  max-width: 366px;
 
-header, section, footer {
-  padding-inline: 1.2rem;
+  @include media(mobile-medium) {
+    max-width: 440px;
+  }
+
+  @include media(mobile-large) {
+    max-width: 536px;
+  }
 
   @include media(tablet) {
-    padding-inline: 3.5rem;
+    max-width: 706px;
+  }
+
+  @include media(tablet-medium) {
+    max-width: 803px;
   }
 
   @include media(tablet-large) {
-    padding-inline: 8rem;
+    max-width: 900px;
   }
   
   @include media(desktop-small) {
-    padding-inline: 9rem;     
+    max-width: 1020px;
   }
 
   @include media(desktop) {
-    padding-inline: 15rem;     
+    max-width: 1100px;
   }
 
   @include media(desktop-large) {
-    padding-inline: 31.2rem;
+    max-width: 1296px;
   }
 }
