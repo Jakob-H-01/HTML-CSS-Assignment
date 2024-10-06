@@ -1,10 +1,10 @@
-const buttonDarkMode = document.querySelector('.btn--toggle');
+const buttonDarkMode = document.querySelector('.btn-toggle');
 const hamburger = document.querySelector('.hamburger-menu');
 const appStore = document.querySelector('.icon-appstore');
 const googlePlay = document.querySelector('.icon-googleplay');
 const downArrow = document.querySelector('.down-arrow');
 const faqArrow = document.querySelectorAll('.faq-arrow');
-const faqBtn = document.querySelectorAll('.btn--faq');
+const faqBtn = document.querySelectorAll('.btn-circle--small');
 const mail = document.querySelector('.mail');
 const phoneMiddle = document.querySelector('.phone-middle');
 const phoneScreensSide = document.querySelectorAll('.phone-side');
@@ -59,8 +59,8 @@ function changeInTablet(mediaQuery) {
     
     faqArrow[0].classList.remove('active-arrow');
     faqArrow[2].classList.add('active-arrow');
-    faqBtn[0].classList.remove('btn--primary');
-    faqBtn[2].classList.add('btn--primary');
+    faqBtn[0].classList.remove('btn-circle--primary');
+    faqBtn[2].classList.add('btn-circle--primary');
   } else {
     if (document.body.classList.contains('dark-mode')) {
       faqArrow[2].setAttribute('src', '/images/faq-down-arrow-dark.svg');
@@ -73,8 +73,8 @@ function changeInTablet(mediaQuery) {
 
     faqArrow[2].classList.remove('active-arrow');
     faqArrow[0].classList.add('active-arrow');
-    faqBtn[2].classList.remove('btn--primary');
-    faqBtn[0].classList.add('btn--primary');
+    faqBtn[2].classList.remove('btn-circle--primary');
+    faqBtn[0].classList.add('btn-circle--primary');
   }
 }
 

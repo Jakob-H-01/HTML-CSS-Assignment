@@ -80,4 +80,18 @@
       display: block;
     }
   }
+
+  .btn-primary {
+    display: none;
+
+    @include media(desktop) {
+      display: flex;
+    }
+  }
+
+  .btn-mobile-menu {
+    @include media(desktop) {
+      display: none;
+    }
+  }
 }

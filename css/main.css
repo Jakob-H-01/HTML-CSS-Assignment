@@ -152,12 +152,18 @@ body {
   }
 }
 
-.btn {
+.btn-mobile-menu {
   cursor: pointer;
   border: none;
   background-color: transparent;
+  width: 3rem;
+  height: 3.6rem;
 }
-.btn--toggle {
+
+.btn-toggle {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
   width: 4.6rem;
   height: 2.3rem;
   background: var(--color-gray);
@@ -169,7 +175,7 @@ body {
   outline: none;
   transition: 0.5s;
 }
-.btn--toggle::before {
+.btn-toggle::before {
   content: "";
   width: 2.3rem;
   height: 2.3rem;
@@ -181,59 +187,17 @@ body {
   transform: scale(0.75);
   transition: 0.5s;
 }
-.btn--toggle:checked {
+.btn-toggle:checked {
   background: var(--color-primary);
 }
-.btn--toggle:checked::before {
+.btn-toggle:checked::before {
   left: 2.25rem;
 }
-.btn--mobile-menu {
+
+.btn-primary {
+  cursor: pointer;
+  border: none;
   background-color: transparent;
-  width: 3rem;
-  height: 3.6rem;
-}
-@media (min-width: 1400px) {
-  .btn--mobile-menu {
-    display: none;
-  }
-}
-.btn--download {
-  background-color: var(--color-download-link);
-  padding: 1rem 1.5rem;
-  border-radius: 0.8rem;
-  display: grid;
-  place-items: center;
-}
-@media (min-width: 1400px) {
-  .btn--download {
-    padding: 1rem 2.2rem;
-  }
-}
-.btn--discover-more {
-  background-color: var(--color-button-discover);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 4.4rem;
-  height: 4.4rem;
-  border-radius: 50%;
-  box-shadow: 0 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0 2px 6.4px -1px rgba(19, 16, 34, 0.03);
-}
-.btn--discover-more .down-arrow {
-  width: 1.2rem;
-  height: 0.8rem;
-}
-.btn--faq {
-  background-color: var(--color-background-section);
-  padding: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  width: 3.6rem;
-  height: 3.6rem;
-}
-.btn--primary {
   background-color: var(--color-primary);
   color: var(--color-white);
   display: flex;
@@ -241,45 +205,86 @@ body {
   justify-content: center;
   gap: 0.8rem;
 }
-.btn--primary--small {
+.btn-primary--small {
   border-radius: 0.4rem;
   padding: 0.9rem 2rem;
   font-size: 1.4rem;
   line-height: 130%;
-  display: none;
 }
-@media (min-width: 1400px) {
-  .btn--primary--small {
-    display: flex;
-    gap: 0.8rem;
-  }
-}
-.btn--primary--medium {
+.btn-primary--medium {
   border-radius: 0.6rem;
   padding: 1.1rem 2.8rem;
   font-size: 1.4rem;
   line-height: 160%;
 }
-.btn--primary--large {
+.btn-primary--large {
   border-radius: 0 0.8rem 0.8rem 0;
   padding: 1.3rem 2rem;
   font-size: 1.6rem;
   line-height: 160%;
 }
 @media (min-width: 1400px) {
-  .btn--primary--large {
+  .btn-primary--large {
     padding: 1.3rem 3.2rem;
   }
 }
-.btn--contact {
+
+.btn-download {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  background-color: var(--color-download-link);
+  padding: 1rem 1.5rem;
+  border-radius: 0.8rem;
+  display: grid;
+  place-items: center;
+}
+@media (min-width: 1400px) {
+  .btn-download {
+    padding: 1rem 2.2rem;
+  }
+}
+
+.btn-circle {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.btn-circle--small {
+  width: 3.6rem;
+  height: 3.6rem;
+  padding: 1.5rem;
+  background-color: var(--color-background-section);
+}
+.btn-circle--large {
+  width: 4.4rem;
+  height: 4.4rem;
+  background-color: var(--color-button-discover);
+  box-shadow: 0 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0 2px 6.4px -1px rgba(19, 16, 34, 0.03);
+}
+.btn-circle--primary {
+  background-color: var(--color-primary);
+}
+
+.btn-contact {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
   font-size: 1.4rem;
   font-weight: 600;
   line-height: 160%;
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
 }
-.btn--contact--primary {
+.btn-contact--primary {
   color: var(--color-primary);
 }
-.btn--contact--success {
+.btn-contact--success {
   color: var(--color-success);
 }
 
@@ -486,6 +491,19 @@ header, section, footer {
 @media (min-width: 768px) {
   .header p {
     display: block;
+  }
+}
+.header .btn-primary {
+  display: none;
+}
+@media (min-width: 1400px) {
+  .header .btn-primary {
+    display: flex;
+  }
+}
+@media (min-width: 1400px) {
+  .header .btn-mobile-menu {
+    display: none;
   }
 }
 
@@ -1213,7 +1231,7 @@ header, section, footer {
   }
 }
 @media (min-width: 768px) {
-  .section-faq .btn--primary--medium {
+  .section-faq .btn-primary--medium {
     display: none;
   }
 }
@@ -1236,11 +1254,6 @@ header, section, footer {
   flex-direction: column;
   align-items: flex-start;
   gap: 1.6rem;
-}
-.section-faq .btn--contact {
-  display: flex;
-  align-items: center;
-  gap: 1.3rem;
 }
 
 .dark-mode {
