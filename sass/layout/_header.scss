@@ -33,6 +33,7 @@
   }
 
   .nav-links {
+    list-style: none;
     display: none;
 
     @include media(desktop) {
@@ -41,19 +42,16 @@
   }
 
   .nav-link {
-    list-style: none;
+    color: var(--color-nav-link);
+    font-size: $font-size-medium;
+    line-height: 160%;
+    text-decoration: none;
 
-    a {
-      color: var(--color-nav-link);
-      font-size: $font-size-medium;
-      line-height: 160%;
-      text-decoration: none;
-    }
-
-    a:hover {
+    &:hover, &:focus-visible {
       color: var(--color-primary);
     }
   }
+
 
   .button-container {
     display: flex;

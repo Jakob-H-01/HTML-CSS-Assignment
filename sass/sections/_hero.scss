@@ -7,7 +7,7 @@
   overflow: hidden;
   
   @include media(tablet) {
-    padding-block: 12.7rem 0;
+    padding-block: 13.4rem 0;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr auto;
     column-gap: 15rem;
@@ -22,7 +22,7 @@
   }
 
   @include media(desktop-large) {
-    padding-block: 22.1rem 0;
+    padding-block: 22.3rem 0;
   }
 
   h1 {

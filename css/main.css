@@ -20,7 +20,7 @@
   --color-input-placeholder: #B4B7C9;
 }
 
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -258,13 +258,13 @@ body {
   border-radius: 0.6rem;
   padding: 1.1rem 2.8rem;
   font-size: 1.4rem;
-  line-height: 2.24rem;
+  line-height: 160%;
 }
 .btn--primary--large {
   border-radius: 0 0.8rem 0.8rem 0;
   padding: 1.3rem 2rem;
   font-size: 1.6rem;
-  line-height: 2.56rem;
+  line-height: 160%;
 }
 @media (min-width: 1400px) {
   .btn--primary--large {
@@ -281,6 +281,97 @@ body {
 }
 .btn--contact--success {
   color: var(--color-success);
+}
+
+.form-container {
+  background-color: var(--color-background-section);
+  padding: 4.8rem 1.6rem 4.39rem 1.6rem;
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.1rem;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    padding: 7.2rem 2.4rem;
+  }
+}
+@media (min-width: 1400px) {
+  .form-container {
+    padding: 7.2rem 4rem;
+    gap: 4rem;
+    grid-template-columns: 10fr 9fr;
+  }
+}
+@media (min-width: 1920px) {
+  .form-container {
+    padding: 7.2rem 11rem;
+    gap: 7.8rem;
+  }
+}
+.form-container .form-heading {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+@media (min-width: 768px) {
+  .form-container .form-heading {
+    gap: 3.2rem;
+  }
+}
+.form-container .form-heading-span {
+  display: none;
+}
+@media (min-width: 1400px) {
+  .form-container .form-heading-span {
+    display: inline;
+  }
+}
+.form-container .form {
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .form-container .form {
+    height: 5.23rem;
+  }
+}
+.form-container .inner-container {
+  position: relative;
+}
+.form-container .mail {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 1.686rem;
+}
+.form-container input {
+  height: 100%;
+  padding-left: 4.8rem;
+  border-radius: 0.8rem 0 0 0.8rem;
+  border: 1px solid var(--color-border-input);
+  background-color: var(--color-background-input);
+  width: 100%;
+  font-size: 1.6rem;
+}
+.form-container input::-moz-placeholder {
+  color: var(--color-input-placeholder);
+}
+.form-container input::placeholder {
+  color: var(--color-input-placeholder);
+}
+
+.icon-box {
+  background: var(--color-icon-box);
+  padding: 1.6rem;
+  border-radius: 0.8rem;
+  display: grid;
+  place-items: center;
 }
 
 .wrapper {
@@ -352,6 +443,7 @@ header, section, footer {
   gap: 4.8rem;
 }
 .header .nav-links {
+  list-style: none;
   display: none;
 }
 @media (min-width: 1400px) {
@@ -360,15 +452,12 @@ header, section, footer {
   }
 }
 .header .nav-link {
-  list-style: none;
-}
-.header .nav-link a {
   color: var(--color-nav-link);
   font-size: 1.6rem;
   line-height: 160%;
   text-decoration: none;
 }
-.header .nav-link a:hover {
+.header .nav-link:hover, .header .nav-link:focus-visible {
   color: var(--color-primary);
 }
 .header .button-container {
@@ -430,7 +519,7 @@ header, section, footer {
 }
 @media (min-width: 768px) {
   .section-hero {
-    padding-block: 12.7rem 0;
+    padding-block: 13.4rem 0;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr auto;
     -moz-column-gap: 15rem;
@@ -449,7 +538,7 @@ header, section, footer {
 }
 @media (min-width: 1920px) {
   .section-hero {
-    padding-block: 22.1rem 0;
+    padding-block: 22.3rem 0;
   }
 }
 @media (min-width: 768px) {
@@ -787,11 +876,6 @@ header, section, footer {
   align-items: flex-start;
   width: 100%;
 }
-.section-app-features .features-icon {
-  background: var(--color-icon-box);
-  padding: 1.6rem;
-  border-radius: 0.8rem;
-}
 .section-app-features .features-text {
   display: flex;
   flex-direction: column;
@@ -941,11 +1025,7 @@ header, section, footer {
 .section-features .feature {
   display: grid;
   gap: 1.6rem;
-}
-.section-features .feature-icon {
-  background-color: var(--color-icon-box);
-  padding: 1.6rem;
-  border-radius: 0.8rem;
+  justify-items: flex-start;
 }
 .section-features .btn {
   display: flex;
@@ -998,7 +1078,7 @@ header, section, footer {
   content: "";
   height: 20px;
   width: 20px;
-  padding: 1.2rem;
+  padding: 2.2rem;
   border-radius: 0.6rem;
   position: absolute;
   left: 24px;
@@ -1161,88 +1241,6 @@ header, section, footer {
   display: flex;
   align-items: center;
   gap: 1.3rem;
-}
-.section-faq .form-container {
-  background-color: var(--color-background-section);
-  padding: 4.8rem 1.6rem 4.39rem 1.6rem;
-  border-radius: 0.8rem;
-  display: flex;
-  flex-direction: column;
-  gap: 3.1rem;
-  width: 100%;
-}
-@media (min-width: 768px) {
-  .section-faq .form-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    place-items: center;
-    padding: 7.2rem 2.4rem;
-  }
-}
-@media (min-width: 1400px) {
-  .section-faq .form-container {
-    padding: 7.2rem 4rem;
-    gap: 4rem;
-    grid-template-columns: 10fr 9fr;
-  }
-}
-@media (min-width: 1920px) {
-  .section-faq .form-container {
-    padding: 7.2rem 11rem;
-    gap: 7.8rem;
-  }
-}
-.section-faq .form-heading {
-  display: flex;
-  align-items: center;
-  gap: 1.6rem;
-}
-@media (min-width: 768px) {
-  .section-faq .form-heading {
-    gap: 3.2rem;
-  }
-}
-.section-faq .form-heading-span {
-  display: none;
-}
-@media (min-width: 1400px) {
-  .section-faq .form-heading-span {
-    display: inline;
-  }
-}
-.section-faq .form {
-  display: flex;
-  justify-content: center;
-}
-@media (min-width: 768px) {
-  .section-faq .form {
-    height: 5.23rem;
-  }
-}
-.section-faq .inner-container {
-  position: relative;
-}
-.section-faq .mail {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  padding-left: 1.686rem;
-}
-.section-faq input {
-  height: 100%;
-  padding-left: 4.8rem;
-  border-radius: 0.8rem 0 0 0.8rem;
-  border: 1px solid var(--color-border-input);
-  background-color: var(--color-background-input);
-  width: 100%;
-  font-size: 1.6rem;
-}
-.section-faq input::-moz-placeholder {
-  color: var(--color-input-placeholder);
-}
-.section-faq input::placeholder {
-  color: var(--color-input-placeholder);
 }
 
 .dark-mode {

@@ -57,12 +57,7 @@
   .feature {
     display: grid;
     gap: 1.6rem;
-  }
-  
-  .feature-icon {
-    background-color: var(--color-icon-box);
-    padding: 1.6rem;
-    border-radius: 0.8rem;
+    justify-items: flex-start;
   }
 
   .btn {

@@ -111,14 +111,14 @@
       border-radius: 0.6rem;
       padding: 1.1rem 2.8rem;
       font-size: $font-size-small;
-      line-height: 2.24rem;
+      line-height: 160%;
     }
   
     &--large {
       border-radius: 0 0.8rem 0.8rem 0;
       padding: 1.3rem 2rem;
       font-size: $font-size-medium;
-      line-height: 2.56rem;
+      line-height: 160%;
 
       @include media(desktop) {
         padding: 1.3rem 3.2rem;
